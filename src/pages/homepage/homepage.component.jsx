@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatbotPedia from "../../components/chatbot/chatbot.jsx";
+
 import Directory from '../../components/directory/directory.component';
 
 import './homepage.styles.scss';
