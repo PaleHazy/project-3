@@ -60,7 +60,7 @@ const mapDispatchToProps = dispatch => {
   console.log('dispatch',dispatch)
   return {
     setCurrentUser: user => {
-      console.log('user', user) 
+      console.log('user', user)
       return (dispatch(setCurrentUser(user)))}
   };
 };
