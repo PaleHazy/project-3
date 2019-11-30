@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
+  console.log('we are inside the production build ladies and gentlemen')
   app.use(express.static(path.join(__dirname, "client/build")));
 
   app.get("*", function(req, res) {
@@ -34,7 +35,8 @@ app.post("/payment", (req, res) => {
     amount: req.body.amount,
     currency: "usd"
   };
-console.log(req.body)
+console.log('req dot body', req.body)
+console.log('body', body)
   stripe.charges.create(body, (stripeErr, stripeRes) => {
     if (stripeErr) {
       res.status(500).send({ error: stripeErr });
