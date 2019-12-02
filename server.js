@@ -15,9 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 if (process.env.NODE_ENV === "production") {
-  console.log('we are inside the production build ladies and gentlemen')
+  console.log("we are inside the production build ladies and gentlemen");
   app.use(express.static(path.join(__dirname, "client/build")));
-
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
@@ -29,18 +28,22 @@ app.listen(port, error => {
 });
 
 app.post("/payment", (req, res) => {
+  console.log('yoo')
+  try{
   const body = {
     source: req.body.token.id,
     amount: req.body.amount,
     currency: "usd"
   };
-console.log('req dot body', req.body)
-console.log('body', body)
+  
   stripe.charges.create(body, (stripeErr, stripeRes) => {
     if (stripeErr) {
       res.status(500).send({ error: stripeErr });
     } else {
       res.status(200).send({ success: stripeRes });
     }
-  });
+  })}
+  catch(error) {    
+    res.send('sheee')
+  }
 });
