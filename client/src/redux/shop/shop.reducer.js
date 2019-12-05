@@ -22,4 +22,4 @@ const shopReducer = (state = INITIIAL_STATE, action) => {
   }
 };
 
-export default shopReducer; 
+export default shopReducer;

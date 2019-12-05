@@ -12,7 +12,7 @@ const CustomButton = ({
   <button
     className={`${inverted ? "inverted" : ""} ${
       isGoogleSignIn ? "google-sign-in" : ""
-    } ${more ? "more" : ""} custom-button `}
+    } ${more ? "more" : ""} custom-button , hvr-sweep-to-left `}
     {...otherProps}
   >
     {children}
