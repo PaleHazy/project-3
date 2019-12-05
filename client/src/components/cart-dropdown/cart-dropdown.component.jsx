@@ -15,15 +15,15 @@ const CartDropdown = ({ cartItems, history, ...otherProps  }) => {
     <div className='cart-dropdown'>
     <div className='cart-items'>
         {
-          
-          cartItems.length ? 
+
+          cartItems.length ?
           cartItems.map(cartItem => {
           console.log("cartItem", cartItem);
           return (<CartItem key={cartItem.id} item={cartItem}/>);
         })
-        : 
+        :
         <span className='empty-message'>Cart is empty</span>
-        
+
         }
       </div>
       <CustomButton onClick={() => {

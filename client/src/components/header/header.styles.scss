@@ -4,11 +4,19 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  background-color:rgb(175,150,200);
+  
+  h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding: 8px;
   }
 
   .options {

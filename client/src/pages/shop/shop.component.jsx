@@ -8,7 +8,7 @@ import {
 } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import { updateCollections } from "../../redux/shop/shop.actions";
-
+import "./shop.styles.scss";
 import WithSpinner from "../../components/with-spinner/with-spinner.component";
 
 const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview);

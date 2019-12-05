@@ -1,4 +1,6 @@
 const INITIAL_STATE = {
+<<<<<<< HEAD
+=======
   // sections: [
   //     {
   //       title: 'hats',
@@ -33,6 +35,7 @@ const INITIAL_STATE = {
   //       linkUrl: 'shop/mens'
   //     }
   //   ]
+>>>>>>> d72b3c4df68b234437bd07877e793c2ca29f1f10
   sections: [
     {
       title: "extensions",
@@ -84,4 +87,12 @@ const directoryReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
+<<<<<<< HEAD
+}
+
 export default directoryReducer;
+
+
+=======
+export default directoryReducer;
+>>>>>>> d72b3c4df68b234437bd07877e793c2ca29f1f10

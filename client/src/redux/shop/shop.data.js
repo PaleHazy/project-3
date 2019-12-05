@@ -1,249 +1,278 @@
-const SHOP_DATA = {
-  hats: {
-    id: 1,
-    title: 'Hats',
-    routeName: 'hats',
-    items: [
-      {
-        id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-        price: 25
-      },
-      {
-        id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-        price: 18
-      },
-      {
-        id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-        price: 35
-      },
-      {
-        id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-        price: 25
-      },
-      {
-        id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-        price: 18
-      },
-      {
-        id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-        price: 14
-      },
-      {
-        id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-        price: 18
-      },
-      {
-        id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-        price: 14
-      },
-      {
-        id: 9,
-        name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-        price: 16
-      }
-    ]
-  },
-  sneakers: {
-    id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
-    items: [
-      {
-        id: 10,
-        name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        price: 220
-      },
-      {
-        id: 11,
-        name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        price: 280
-      },
-      {
-        id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110
-      },
-      {
-        id: 13,
-        name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-        price: 160
-      },
-      {
-        id: 14,
-        name: 'Nike Red High Tops',
-        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        price: 160
-      },
-      {
-        id: 15,
-        name: 'Nike Brown High Tops',
-        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-        price: 160
-      },
-      {
-        id: 16,
-        name: 'Air Jordan Limited',
-        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        price: 190
-      },
-      {
-        id: 17,
-        name: 'Timberlands',
-        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        price: 200
-      }
-    ]
-  },
-  jackets: {
-    id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
-    items: [
-      {
-        id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125
-      },
-      {
-        id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-        price: 90
-      },
-      {
-        id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-        price: 90
-      },
-      {
-        id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        price: 165
-      },
-      {
-        id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        price: 185
-      }
-    ]
-  },
-  womens :{
-    id: 4,
-    title: 'Womens',
-    routeName: 'womens',
-    items: [
-      {
-        id: 23,
-        name: 'Blue Tanktop',
-        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        price: 25
-      },
-      {
-        id: 24,
-        name: 'Floral Blouse',
-        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        price: 20
-      },
-      {
-        id: 25,
-        name: 'Floral Dress',
-        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        price: 80
-      },
-      {
-        id: 26,
-        name: 'Red Dots Dress',
-        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        price: 80
-      },
-      {
-        id: 27,
-        name: 'Striped Sweater',
-        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        price: 45
-      },
-      {
-        id: 28,
-        name: 'Yellow Track Suit',
-        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        price: 135
-      },
-      {
-        id: 29,
-        name: 'White Blouse',
-        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        price: 20
-      }
-    ]
-  },
-  mens: {
-    id: 5,
-    title: 'Mens',
-    routeName: 'mens',
-    items: [
-      {
-        id: 30,
-        name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        price: 325
-      },
-      {
-        id: 31,
-        name: 'Floral T-shirt',
-        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-        price: 20
-      },
-      {
-        id: 32,
-        name: 'Black & White Longsleeve',
-        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-        price: 25
-      },
-      {
-        id: 33,
-        name: 'Pink T-shirt',
-        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-        price: 25
-      },
-      {
-        id: 34,
-        name: 'Jean Long Sleeve',
-        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-        price: 40
-      },
-      {
-        id: 35,
-        name: 'Burgundy T-shirt',
-        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-        price: 25
-      }
-    ]
-  }
-};
+// const SHOP_DATA = {
+//   extensions: {
+//     id: 1,
+//     title: "Web Building Premium Extensions",
+//     routeName: "Extensions",
+//     items: [
+//       {
+//         id: 1,
+//         name: "Data Migration",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+//         price: 25
+//       },
+//       {
+//         id: 2,
+//         name: "Email Address Book",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1573235781593-0094b20e59d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80",
+//         price: 18
+//       },
+//       {
+//         id: 3,
+//         name: "Constant Contact",
+//         imageUrl:
+//           "https://www.formstack.com/images/integrations/individual/constant-contact.png",
+//         // "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+//         price: 35
+//       },
+//       {
+//         id: 4,
+//         name: "Booking Calender for Webbuilder",
+//         imageUrl:
+//           "http://lucknowwebs.com/wp-content/uploads/2018/11/timeslot-booking-calander-screen1.jpg",
+//         price: 25
+//       },
+//       {
+//         id: 5,
+//         name: "Security Plus Web Protection",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1482745637430-91c0bbcea3e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+//         price: 18
+//       },
+//       {
+//         id: 6,
+//         name: "Coffee Script Add-in",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1565843714144-d5a3292ae82d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=30",
+//         price: 14
+//       },
+//       {
+//         id: 7,
+//         name: "Live Chat Support",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1488998287214-1e668a8e0dc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+//         price: 18
+//       },
+//       {
+//         id: 8,
+//         name: "Responsive Mobile Pages",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1523474438810-b04a2480633c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+//         price: 14
+//       },
+//       {
+//         id: 9,
+//         name: "SEO Optimization",
+//         imageUrl:
+//           "https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+//         price: 16
+//       }
+//     ]
+//   },
+//   themes: {
+//     id: 2,
+//     title: "Themes",
+//     routeName: "themes",
+//     items: [
+//       {
+//         id: 10,
+//         name: "Jelly",
+//         imageUrl:
+//           "https://i0.wp.com/themes.svn.wordpress.org/clean-enterprise/1.0.2/screenshot.png?w=1142&strip=all",
+//         price: 65
+//       },
+//       {
+//         id: 11,
+//         name: "Anna Atta",
+//         imageUrl:
+//           "https://i0.wp.com/themes.svn.wordpress.org/esol/2.7/screenshot.png?w=572&strip=all",
+//         price: 55
+//       },
+//       {
+//         id: 12,
+//         name: "Black Travel",
+//         imageUrl:
+//           "https://i0.wp.com/themes.svn.wordpress.org/likhari/1.0.0.3/screenshot.png?w=572&strip=all",
+//         price: 110
+//       },
+//       {
+//         id: 13,
+//         name: "Sauron",
+//         imageUrl:
+//           "https://i0.wp.com/themes.svn.wordpress.org/tale-travel/1.0.9/screenshot.png?w=572&strip=all",
+//         price: 160
+//       },
+//       {
+//         id: 14,
+//         name: "Standard Lite",
+//         imageUrl:
+//           "https://cdn.wpbeginner.com/wp-content/uploads/2019/08/wpforms.png",
+//         price: 160
+//       },
+//       {
+//         id: 15,
+//         name: "Enterprise",
+//         imageUrl:
+//           "https://cdn3.wpbeginner.com/wp-content/uploads/2019/10/astrawidgets.jpg",
+//         price: 160
+//       },
+//       {
+//         id: 16,
+//         name: "Corporate",
+//         imageUrl:
+//           "https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Google_Maps_Beta.png/220px-Google_Maps_Beta.png",
+//         price: 190
+//       },
+//       {
+//         id: 17,
+//         name: "Classic Lite",
+//         imageUrl:
+//           "https://cdn4.wpbeginner.com/wp-content/uploads/2019/10/googlemapswidget.jpg",
+//         price: 200
+//       }
+//     ]
+//   },
+//   plugins: {
+//     id: 3,
+//     title: "Plugins",
+//     routeName: "plugins",
+//     items: [
+//       {
+//         id: 18,
+//         name: "SMTP Plugin",
+//         imageUrl:
+//           "https://marketplace.magento.com/media/catalog/product/cache/49f698d8a4900b69ed7d5314e97401f4/m/a/magento-2-smtp_1_1_3.png",
+//         price: 15
+//       },
+//       {
+//         id: 19,
+//         name: "W3 Total Cache",
+//         imageUrl:
+//           "https://colorlib.com/wp/wp-content/uploads/sites/2/wordpress-cache-plugins.jpg",
+//         price: 90
+//       },
+//       {
+//         id: 20,
+//         name: "Beaver Builder - Drag & Drop",
+//         imageUrl:
+//           "https://pbs.twimg.com/profile_images/512694500976635904/P3Wpd-5N.jpeg",
+//         price: 90
+//       },
+//       {
+//         id: 21,
+//         name: "Creating FAQ's",
+//         imageUrl:
+//           "https://www.wpsuperstars.net/wp-content/uploads/2017/11/Best-FAQ-Plugins-For-WordPress-Websites.png",
+//         price: 25
+//       },
+//       {
+//         id: 22,
+//         name: "Sucuri Web Firewall",
+//         imageUrl:
+//           "https://ps.w.org/sucuri-scanner/assets/icon-256x256.png?rev=1235419",
+//         price: 50
+//       }
+//     ]
+//   },
+//   tutorials: {
+//     id: 4,
+//     title: "Tutorials",
+//     routeName: "tutorials",
+//     items: [
+//       {
+//         id: 23,
+//         name: "React for Beginners",
+//         imageUrl:
+//           "https://image.slidesharecdn.com/reactforbegginers-160306225920/95/react-for-beginners-1-638.jpg?cb=1467899277",
+//         price: 125
+//       },
+//       {
+//         id: 24,
+//         name: "Learn HTML5 in 55 Minutes",
+//         imageUrl:
+//           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png",
+//         price: 55
+//       },
+//       {
+//         id: 25,
+//         name: "Learn Advanced CSS",
+//         imageUrl:
+//           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
+//         price: 80
+//       },
+//       {
+//         id: 26,
+//         name: "Ruby on Rails Developer Course",
+//         imageUrl: "https://miro.medium.com/max/1200/0*hbmyPCa0Nv_YEgaS.png",
+//         price: 80
+//       },
+//       {
+//         id: 27,
+//         name: "Node JS Beginner to Expert",
+//         imageUrl:
+//           "https://pluralsight.imgix.net/paths/path-icons/nodejs-601628d09d.png",
+//         price: 85
+//       },
+//       {
+//         id: 28,
+//         name: "Core and Essentials Angular Course",
+//         imageUrl:
+//           "https://static.frontendmasters.com/assets/courses/2018-12-21-angular-core/thumb.jpg",
+//         price: 135
+//       },
+//       {
+//         id: 29,
+//         name: "Zero to Hero with Grunt",
+//         imageUrl: "https://avatars2.githubusercontent.com/u/1630826?s=400&v=4",
+//         price: 20
+//       }
+//     ]
+//   },
+//   books: {
+//     id: 5,
+//     title: "Books",
+//     routeName: "books",
+//     items: [
+//       {
+//         id: 30,
+//         name: "Mobile App Development",
+//         imageUrl: "https://covers.vitalbook.com/vbid/9781943153275/width/200",
+//         price: 25
+//       },
+//       {
+//         id: 31,
+//         name: "Fundamentals of Web Development",
+//         imageUrl: "https://covers.vitalbook.com/vbid/9780134481807/width/200",
+//         price: 20
+//       },
+//       {
+//         id: 32,
+//         name: "PHP and MYSQL Web Development",
+//         imageUrl: "https://covers.vitalbook.com/vbid/9780133038637/width/200",
+//         price: 25
+//       },
+//       {
+//         id: 33,
+//         name: "An Introduction to Web Development",
+//         imageUrl: "https://covers.vitalbook.com/vbid/81107-2A/width/200",
+//         price: 25
+//       },
+//       {
+//         id: 34,
+//         name: "Web Development and Design Foundations with HTML5",
+//         imageUrl: "https://covers.vitalbook.com/vbid/9780133742152/width/200",
+//         price: 40
+//       },
+//       {
+//         id: 35,
+//         name: "Learning React",
+//         imageUrl: "https://covers.vitalbook.com/vbid/9781491954577/width/200",
+//         price: 25
+//       }
+//     ]
+//   }
+// };
 
-export default SHOP_DATA;
+
+// export default SHOP_DATA;

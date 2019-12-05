@@ -1,21 +1,23 @@
 .cart-icon {
-    width: 45px;
-    height: 45px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 
-    .shopping-icon{
-        width: 24px;
-        height: 24px;
-    }
+  .shopping-icon {
+    width: 30px;
+    height: 30px;
+  }
 
-    .item-count{
-        position: absolute;
-        font-size: 10px;
-        font-weight: bold;
-        bottom: 12px;
-    }
+  .item-count {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bolder;
+    bottom: 15px;
+    color: rgb(175, 150, 200);
+    z-index: 5555;
+  }
 }
