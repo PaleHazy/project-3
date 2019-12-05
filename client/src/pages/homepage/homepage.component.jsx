@@ -12,18 +12,9 @@ const mongoGetter = () => {
   });
 };
 
-const mongoSetter = () => {
-  return axios({
-    url: "/mongoAdd",
-    method: "post"
-  }).then(response => {
-    console.log(response.data);
-  });
-};
 const HomePage = () => (
   <div className='homepage'>
     <Directory />
-    <button onClick={() => mongoSetter()}>add to </button>
     <button onClick={() => mongoGetter()}>Test Mongo db connection</button>
   </div>
 );
