@@ -21,7 +21,6 @@ const CollectionPreview = ({ title, items, ...otherProppies }) => {
         more
         onClick=
         {() => {
-          console.log(otherProppies)
           return otherProppies.history.push(
             `${otherProppies.match.path}/${otherProppies.routeName}`
           );

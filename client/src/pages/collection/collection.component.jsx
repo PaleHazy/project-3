@@ -5,7 +5,6 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 //import CollectionItem from '../../components/collection-item/collection-item.component'
 import "./collection.styles.scss";
 const CollectionPage = (proppies) => {
-  console.log('proppies from collection.component', proppies);
   const {title, items} = proppies.collection
   return (
     <div className='collection-page'>
@@ -13,7 +12,6 @@ const CollectionPage = (proppies) => {
       <div className='items'>
           {
             items.map(item => {
-
                 return <CollectionItem key={item.id} item={item}/>
             })  
           }

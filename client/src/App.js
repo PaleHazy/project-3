@@ -23,14 +23,12 @@ class App extends React.Component {
 
     const { setCurrentUser /**collectionsArray*/ } = this.props;
 
-    console.log("props", this.props);
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot(snapShot => {
-          console.log("firebase snapshot", snapShot);
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data()
@@ -81,10 +79,8 @@ const giveStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => {
-  console.log("dispatch", dispatch);
   return {
     setCurrentUser: user => {
-      console.log("user", user);
       return dispatch(setCurrentUser(user));
     }
   };

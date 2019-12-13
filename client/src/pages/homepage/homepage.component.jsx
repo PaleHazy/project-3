@@ -8,7 +8,6 @@ const mongoGetter = () => {
     url: "/mongoRetrieve",
     method: "post"
   }).then(response => {
-    console.log(response.data);
   });
 };
 

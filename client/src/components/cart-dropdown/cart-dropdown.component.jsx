@@ -9,8 +9,6 @@ import { createStructuredSelector } from 'reselect'
 import {withRouter} from 'react-router-dom'
 
 const CartDropdown = ({ cartItems, history, ...otherProps  }) => {
-    console.log('fuuuuu',cartItems)
-    console.log('other props ', otherProps)
   return (
     <div className='cart-dropdown'>
     <div className='cart-items'>
@@ -18,7 +16,6 @@ const CartDropdown = ({ cartItems, history, ...otherProps  }) => {
 
           cartItems.length ?
           cartItems.map(cartItem => {
-          console.log("cartItem", cartItem);
           return (<CartItem key={cartItem.id} item={cartItem}/>);
         })
         :
