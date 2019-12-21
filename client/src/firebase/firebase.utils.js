@@ -4,26 +4,23 @@ import "firebase/auth";
 
 const config = {
   apiKey: "AIzaSyDYVHONj3QIui-wCHgMatpIiraB-x3TxY4",
-  authDomain: "project-3-6eebe.firebaseapp.com",
-  databaseURL: "https://project-3-6eebe.firebaseio.com",
-  projectId: "project-3-6eebe",
-  storageBucket: "project-3-6eebe.appspot.com",
-  messagingSenderId: "469445939875",
-  appId: "1:469445939875:web:f2600b33788ac63b272516",
-  measurementId: "G-1PR8X3MD93"
+    authDomain: "project-3-6eebe.firebaseapp.com",
+    databaseURL: "https://project-3-6eebe.firebaseio.com",
+    projectId: "project-3-6eebe",
+    storageBucket: "project-3-6eebe.appspot.com",
+    messagingSenderId: "469445939875",
+    appId: "1:469445939875:web:f2600b33788ac63b272516",
+    measurementId: "G-1PR8X3MD93"
 };
 
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
-  console.log("userAuth", userAuth);
-  console.log("additionalData", additionalData);
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
-
+ 
   const snapShot = await userRef.get();
-  console.log(snapShot);
 
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
@@ -53,7 +50,6 @@ export const convertCollectionsSnapshotToMap = collectionsSnapshot => {
       items
     };
   });
-  console.log(transformedCollection);
 
   return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
@@ -66,12 +62,9 @@ export const addCollectionAndDocuments = async (
   objectsToAdd
 ) => {
   const collectionRef = firestore.collection(collectionKey);
-  console.log(collectionRef);
-  console.log(objectsToAdd)
   const batch = firestore.batch();
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc();
-    console.log(newDocRef);
     batch.set(newDocRef, obj);
   });
   return await batch.commit();

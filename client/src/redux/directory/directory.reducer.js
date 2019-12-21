@@ -50,7 +50,10 @@ const directoryReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2aaffc80d07bea07ab1752d128d7fd3996e101e0
 
 export default directoryReducer;
 
