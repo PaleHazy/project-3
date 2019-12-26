@@ -4,13 +4,13 @@ import "firebase/auth";
 
 const config = {
   apiKey: "AIzaSyDYVHONj3QIui-wCHgMatpIiraB-x3TxY4",
-    authDomain: "project-3-6eebe.firebaseapp.com",
-    databaseURL: "https://project-3-6eebe.firebaseio.com",
-    projectId: "project-3-6eebe",
-    storageBucket: "project-3-6eebe.appspot.com",
-    messagingSenderId: "469445939875",
-    appId: "1:469445939875:web:f2600b33788ac63b272516",
-    measurementId: "G-1PR8X3MD93"
+  authDomain: "project-3-6eebe.firebaseapp.com",
+  databaseURL: "https://project-3-6eebe.firebaseio.com",
+  projectId: "project-3-6eebe",
+  storageBucket: "project-3-6eebe.appspot.com",
+  messagingSenderId: "469445939875",
+  appId: "1:469445939875:web:f2600b33788ac63b272516",
+  measurementId: "G-1PR8X3MD93"
 };
 
 firebase.initializeApp(config);
@@ -19,7 +19,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
- 
+
   const snapShot = await userRef.get();
 
   if (!snapShot.exists) {
@@ -42,6 +42,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 export const convertCollectionsSnapshotToMap = collectionsSnapshot => {
   const transformedCollection = collectionsSnapshot.docs.map(docSnapshot => {
+    console.log(docSnapshot.data());
     const { title, items } = docSnapshot.data();
     return {
       routeName: encodeURI(title.toLowerCase()),
@@ -73,8 +74,8 @@ export const addCollectionAndDocuments = async (
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: "select_account" });
-export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: "select_account" });
+export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
