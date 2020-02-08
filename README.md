@@ -34,3 +34,4 @@ MongoDB
 
 Thank you for checking out the code and we hope you have a wonderful day.
 Please visit [https://serene-tor-62712.herokuapp.com/](https://serene-tor-62712.herokuapp.com/ "The Bazaar Online")
+![ScreenShot](project1.jpg
