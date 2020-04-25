@@ -12,7 +12,7 @@ import Header from "./components/header/header.component";
 import {
   auth,
   createUserProfileDocument
-  // addCollectionAndDocuments
+  //addCollectionAndDocuments
 } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 // import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
@@ -40,6 +40,8 @@ class App extends React.Component {
     //     collectionsArray.map(({ title, items }) => ({ title, items }))
     //   );
     // });
+    
+
   }
 
   componentWillUnmount() {
