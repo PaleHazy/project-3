@@ -9,6 +9,7 @@ const uriString =
   process.env.MONGODB_URI ||
   process.env.MONGOHQ_URL ||
   "mongodb://localhost/chatBot";
+
   mongoose.connect(uriString, function(err, res) {
     if (err) {
       console.log("ERROR connecting to: " + uriString + ". " + err);
@@ -59,6 +60,7 @@ app.post('/mongoRetrieve', (req,res) =>{
           console.log(err)
       })
 })
+
 app.post("/payment", (req, res) => {
   console.log('yoo')
   try{

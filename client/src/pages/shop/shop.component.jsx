@@ -1,26 +1,26 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchCollectionsStartAsync } from "../../redux/shop/shop.actions";
+import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
 import "./shop.styles.scss";
-import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container'
-import CollectionPageContainer from '../collection/collection.container'
+import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container";
+import CollectionPageContainer from "../collection/collection.container";
 
 class ShopPage extends React.Component {
   componentDidMount() {
-    console.log('BITCH THIS IS WHEN I LOADED')
-    const { fetchCollectionStartAsync } = this.props;
-    fetchCollectionStartAsync();
+    console.log("BITCH THIS IS WHEN I LOADED");
+    const { fetchCollectionStart } = this.props;
+    fetchCollectionStart();
     // fetch('https://firestore.googleapis.com/v1/projects/project-3-6eebe/databases/(default)/documents/collections')
     // .then(response => response.json())
     // .then(collections => console.log(collections))
   }
 
   render() {
-    const { match,loadedCollections } = this.props;
-    console.log('loadedCollections', !loadedCollections)
+    const { match, loadedCollections } = this.props;
+    console.log("loadedCollections", !loadedCollections);
     return (
-      <div className='shop-page'>
+      <div className="shop-page">
         <Route
           exact
           path={`${match.path}`}
@@ -35,8 +35,7 @@ class ShopPage extends React.Component {
   }
 }
 
-
 const mapDispatchToProps = dispatch => ({
-  fetchCollectionStartAsync: () => dispatch(fetchCollectionsStartAsync())
+  fetchCollectionStart: () => dispatch(fetchCollectionsStart())
 });
 export default connect(null, mapDispatchToProps)(ShopPage);
